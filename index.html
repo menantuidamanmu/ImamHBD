@@ -18,6 +18,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
         h1, p {
             margin: 10px 0;
@@ -32,6 +33,8 @@
             animation: typing 3s steps(30, end), blink 0.5s step-end infinite alternate;
             text-align: center;
             margin-top: 20px;
+            max-width: 90%;
+            word-wrap: break-word;
         }
         @keyframes typing {
             from { width: 0 }
@@ -102,6 +105,11 @@
             0% { transform: scale(0.5); opacity: 0; }
             100% { transform: scale(1); opacity: 1; }
         }
+        .surprise img {
+            max-width: 90%;
+            height: auto;
+            margin-bottom: 50px; /* Beri jarak dengan copyright */
+        }
         /* Copyright */
         .copyright {
             position: absolute;
@@ -109,14 +117,17 @@
             font-size: 0.8em;
             color: #fff;
             opacity: 0.7;
+            text-align: center;
+            width: 100%;
         }
         /* Responsive Design */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.5em;
+                font-size: 2em;
+                padding: 0 10px;
             }
             .typewriter {
-                font-size: 1.8em;
+                font-size: 1.5em;
             }
             button {
                 font-size: 1em;
@@ -124,10 +135,10 @@
         }
         @media (max-width: 480px) {
             h1 {
-                font-size: 2em;
+                font-size: 1.8em;
             }
             .typewriter {
-                font-size: 1.5em;
+                font-size: 1.2em;
             }
             .photo-box {
                 width: 150px;
@@ -151,7 +162,7 @@
     <button onclick="showSurprise()">Nih hadiah pencet aja</button>
     
     <div class="surprise">
-        <img src="https://i.ibb.co.com/DzQDnfs/Whats-App-Image-2024-11-07-at-09-06-41-b3871e00.jpg" alt="Surprise!" width="300">
+        <img src="https://i.ibb.co.com/DzQDnfs/Whats-App-Image-2024-11-07-at-09-06-41-b3871e00.jpg" alt="Surprise!">
     </div>
 
     <!-- Copyright -->
