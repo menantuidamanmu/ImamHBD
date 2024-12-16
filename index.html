@@ -1,204 +1,45 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habede Mam</title>
+    <title>Semangat Skripsi</title>
     <style>
-        body {
-            font-family: 'Comic Sans MS', sans-serif;
-            background: linear-gradient(135deg, #000428, #004e92);
-            color: #fff;
-            text-align: center;
-            padding: 20px;
+        * {
             margin: 0;
-            overflow-y: auto; /* Izinkan scroll */
-            height: auto; /* Pastikan tinggi sesuai isi */
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            position: relative;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            font-family: 'Arial', sans-serif;
+            color: white;
         }
-        h1, p {
-            margin: 10px 0;
-            word-break: break-word; /* Bungkus teks panjang */
+
+        h1 {
+            font-size: 4rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
         }
-        .typewriter {
-            display: inline-block;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 4px solid #fff;
-            font-size: 2em;
-            font-weight: bold;
-            animation: typing 3s steps(30, end), blink 0.5s step-end infinite alternate;
-            text-align: center;
-            margin-top: 20px;
-            max-width: 90%;
-            word-wrap: break-word; /* Bungkus teks */
-        }
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        @keyframes blink {
-            from { border-color: transparent }
-            to { border-color: #fff }
-        }
-        .typewriter-text {
-            display: block;
-            margin-bottom: 20px;
-        }
-        .balloons {
-            position: absolute;
-            width: 50px;
-            top: -100px;
-            animation: floatDown 5s linear;
-            opacity: 0.8;
-        }
-        @keyframes floatDown {
-            0% {
-                transform: translateY(-100px);
-                opacity: 0.8;
-            }
-            100% {
-                transform: translateY(100vh);
+
+        @keyframes fadeIn {
+            from {
                 opacity: 0;
+                transform: scale(0.8);
             }
-        }
-
-        .photo-box {
-            width: 200px;
-            height: 200px;
-            background: #fff;
-            border-radius: 20px;
-            overflow: hidden;
-            margin: 20px 0;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        }
-        .photo-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        button {
-            margin-top: 30px;
-            font-size: 1.2em;
-            background: #fff;
-            color: #004e92;
-            border: none;
-            border-radius: 10px;
-            padding: 10px 20px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        button:hover {
-            background: #ffcc00;
-            color: #fff;
-        }
-        .surprise {
-            display: none;
-            margin-top: 20px;
-            animation: pop 0.5s ease-in-out;
-        }
-        @keyframes pop {
-            0% { transform: scale(0.5); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-        .surprise img {
-            max-width: 70%; /* Ukuran lebih kecil */
-            height: auto;
-            margin-bottom: 50px; /* Beri jarak dengan copyright */
-        }
-        /* Copyright */
-        .copyright {
-            position: relative; /* Atur agar selalu di bawah */
-            bottom: 0;
-            font-size: 0.8em;
-            color: #fff;
-            opacity: 0.7;
-            text-align: center;
-            width: 100%;
-            margin-top: 10px;
-        }
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8em;
-                padding: 0 10px;
-            }
-            .typewriter {
-                font-size: 1.5em;
-            }
-            button {
-                font-size: 1em;
-            }
-        }
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.5em;
-            }
-            .typewriter {
-                font-size: 1.2em;
-            }
-            .photo-box {
-                width: 150px;
-                height: 150px;
-            }
-            .surprise img {
-                max-width: 90%; /* Sedikit lebih besar untuk layar kecil */
+            to {
+                opacity: 1;
+                transform: scale(1);
             }
         }
     </style>
 </head>
 <body>
-    <!-- Efek Balon -->
-    <div class="balloon-wrapper"></div>
-
-    <!-- Typewriter Text -->
-    <h1 class="typewriter typewriter-text">HBD Mam, Semoga ...Isi sendiri...</h1>
-    
-    <!-- Foto Teman -->
-    <div class="photo-box">
-        <img src="https://i.ibb.co.com/BKCm99P/Screenshot-2024-11-24-194715.png" alt="Foto Teman">
-    </div>
-
-    <button onclick="showSurprise()">Nih hadiah pencet aja</button>
-    
-    <div class="surprise">
-        <img src="https://i.ibb.co.com/DzQDnfs/Whats-App-Image-2024-11-07-at-09-06-41-b3871e00.jpg" alt="Surprise!">
-    </div>
-
-    <!-- Copyright -->
-    <div class="copyright">© 2024 Dibuat dengan ❤️ untuk Imam</div>
-
-    <script>
-        // Function untuk menunjukkan kejutan
-        function showSurprise() {
-            const surprise = document.querySelector('.surprise');
-            surprise.style.display = 'block';
-        }
-
-        // Membuat balon secara dinamis
-        const balloonWrapper = document.querySelector('.balloon-wrapper');
-
-        function createBalloon() {
-            const balloon = document.createElement('img');
-            balloon.src = "https://i.ibb.co.com/BKCm99P/Screenshot-2024-11-24-194715.png"; // URL gambar balon
-            balloon.alt = "Balloon";
-            balloon.className = "balloons";
-            balloon.style.left = `${Math.random() * 100}vw`; // Posisi X acak
-            balloonWrapper.appendChild(balloon);
-
-            // Hapus balon setelah animasi selesai
-            balloon.addEventListener('animationend', () => {
-                balloon.remove();
-            });
-        }
-
-        // Interval untuk memunculkan balon setiap 500ms
-        setInterval(createBalloon, 500);
-    </script>
+    <h1>Semangat Skripsi!</h1>
 </body>
 </html>
