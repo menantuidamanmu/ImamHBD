@@ -3,43 +3,342 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Semangat Skripsi</title>
+    <title>"Our Roadmap"</title>
     <style>
-        * {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            background-color: #f3e5f5;
+            color: #4a148c;
         }
 
-        body {
+        header {
+            background-color: #6a1b9a;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        main {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #9b59b6, #8e44ad);
-            font-family: 'Arial', sans-serif;
-            color: white;
+            padding: 2rem;
         }
 
-        h1 {
-            font-size: 4rem;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-            animation: fadeIn 2s ease-in-out;
+        .place-card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 1rem 0;
+            width: 90%;
+            max-width: 600px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.8);
+        .place-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .place-photo {
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            background-color: #d1c4e9;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .place-details {
+            padding: 1rem;
+        }
+
+        .place-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #4a148c;
+        }
+
+        .place-address {
+            font-size: 1rem;
+            color: #6a1b9a;
+            margin-bottom: 1rem;
+        }
+
+        .place-description {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+            color: #5e35b1;
+        }
+
+        .place-map {
+            width: 100%;
+            height: 200px;
+            background-color: #ede7f6;
+            border-radius: 4px;
+            border: 1px solid #d1c4e9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #6a1b9a;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            main {
+                padding: 1rem;
             }
-            to {
-                opacity: 1;
-                transform: scale(1);
+
+            .place-card {
+                width: 95%;
+            }
+
+            .place-photo {
+                padding-top: 75%; /* Adjust for better view on smaller screens */
+            }
+
+            .place-name {
+                font-size: 1.25rem;
+            }
+
+            .place-address, .place-description {
+                font-size: 0.9rem;
             }
         }
     </style>
 </head>
 <body>
-    <h1><center>Semangat Skripsi Dhira &#128538;</center></h1>
+    <header>
+        <h1>Our "Roadmap" Together</h1>
+    </header>
+
+    <main>
+        <!-- Template untuk tempat 1 -->
+        <div class="place-card">
+            <div class="place-photo" style="background-image: url('https://i.ibb.co.com/nnHYs12/Rumah.jpg');">
+                <!-- Ganti your-photo.jpg dengan foto yang diinginkan -->
+            </div>
+            <div class="place-details">
+                <div class="place-name">Rumah</div>
+                <div class="place-address">Dimana hayo alamatnya</div>
+                <div class="place-description">Jadi tempat ternyaman bukan? wkwk</div>
+                <div class="place-map"><iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d588.5870438893398!2d110.46392706605664!3d-7.064856547906989!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sid!2sid!4v1734329723327!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- Masukkan embed peta dari Google Maps di sini -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Template untuk tempat 2 -->
+        <div class="place-card">
+            <div class="place-photo" style="background-image: url('https://i.ibb.co.com/vQ94SgM/lawsonpasarmalem.jpg');">
+                <!-- Ganti your-photo2.jpg dengan foto yang diinginkan -->
+            </div>
+            <div class="place-details">
+                <div class="place-name">Lawson Pamularsih atau Lawson Pasar Malem</div>
+                <div class="place-address">Jl. Pamularsih Raya No.69, Bongsari, Kec. Semarang Barat, Kota Semarang, Jawa Tengah 50148</div>
+                <div class="place-description">"eh lawson nya gede banget", "yauda gas kali kesitu", wkwk percakapan dua orang random dan akhirnya nongkrong disitu, kamu beli susu karamel dan aku beli corneto, setelah itu kita deeptalk banyak hal mencakup keluarga masing masing, pandangan kita terkait hubungan, kita yang menjadi adek kaka dan random "kalo udah suka sama aku kabarin ya jan", and finally u slept on my left arm</div>
+                <div class="place-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.2690776496156!2d110.39068405639442!3d-6.988243385498414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b91e5eb8c11%3A0x3712e4c3cc7195d6!2sLawson%20Pamularsih!5e0!3m2!1sid!2sid!4v1734330134867!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- Masukkan embed peta dari Google Maps di sini -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Template untuk tempat 3 -->
+        <div class="place-card">
+            <div class="place-photo" style="background-image: url('https://i.ibb.co.com/5Ltc731/warkit.jpg');">
+                <!-- Ganti your-photo3.jpg dengan foto yang diinginkan -->
+            </div>
+            <div class="place-details">
+                <div class="place-name">Warkit</div>
+                <div class="place-address">Jl. Bulusan Selatan I, Bulusan, Kec. Tembalang, Kota Semarang, Jawa Tengah 50277</div>
+                <div class="place-description">"Kita mau nongkrong dimana?", "ketemu temen aku yok di warkit", "Bolehh, tapi akunya jangan didieminn yaaa", awal mula kamu kuajak ke tongkrongan aku dan lama lama juga nyambung dengan temen temen aku disini, jadi tempat yang enak dan nyaman juga kalo sekedar small talks dan nducelll nducelll, dan kamu paling suka es krim bubur ketan nya warkit</div>
+                <div class="place-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.8840584609175!2d110.44591108485558!3d-7.063647795426091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708f0040b20ca3%3A0x8b50746d7dfb19ee!2sWARUNG%20KITA!5e0!3m2!1sid!2sid!4v1734331178566!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- Masukkan embed peta dari Google Maps di sini -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Template untuk tempat 4 -->
+        <div class="place-card">
+            <div class="place-photo" style="background-image: url('https://i.ibb.co.com/LRFBPgj/mace1.jpg');">
+                <!-- Ganti your-photo4.jpg dengan foto yang diinginkan -->
+            </div>
+            <div class="place-details">
+                <div class="place-name">Mace.co</div>
+                <div class="place-address">Jl. Jahe II, Perum korpri, Sambiroto, Kec. Tembalang, Kota Semarang, Jawa Tengah 50276</div>
+                <div class="place-description">"Kok kamu nemu aja cafe enak kek gini si?", eh buset ngeremehin skill anak semarang cari tempat enak gini wkwk, even kita cuma beberapa kali kesini tapi tempat yang enak apalagi waktu sore hari pas cerah, bisa jadi alternatif kalo mau nongkrong sore hari di tempat yang sepi dan terbuka</div>
+                <div class="place-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1177.2508519557086!2d110.45244602384925!3d-7.034644800410796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708da1d0e99e11%3A0x3e16c2260d2d93d0!2sMace.Co!5e0!3m2!1sid!2sid!4v1734332242309!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- Masukkan embed peta dari Google Maps di sini -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Template untuk tempat 5 -->
+        <div class="place-card">
+            <div class="place-photo" style="background-image: url('https://i.ibb.co.com/vLFKcNc/Besok-Pagi.jpg');">
+                <!-- Ganti your-photo4.jpg dengan foto yang diinginkan -->
+            </div>
+            <div class="place-details">
+                <div class="place-name">Besok Pagi</div>
+                <div class="place-address">Unnamed Road, Pedalangan, Banyumanik, Semarang City, Central Java 50268</div>
+                <div class="place-description">Kedai kopi kecil yang cocok buat kita nongkrong dengan ambient nya yang slow dan nyaman, jadi pilihan kita entah itu deeptalks or even small talks, tempat ini juga menjadi bukti bahwa semua permasalahan pasti bisa dibicarakan, yaa??</div>
+                <div class="place-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.8775384163486!2d110.42753041437965!3d-7.066692752922409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708f8598a4aee7%3A0xa8dfdd2b6f9e52a8!2sBesok%20Pagi!5e0!3m2!1sid!2sid!4v1734342813505!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- Masukkan embed peta dari Google Maps di sini -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Template untuk tempat 5 -->
+        <div class="place-card">
+            <div class="place-photo" style="background-image: url('https://i.ibb.co.com/7JhJgkN/Priangan.jpg');">
+                <!-- Ganti your-photo4.jpg dengan foto yang diinginkan -->
+            </div>
+            <div class="place-details">
+                <div class="place-name">Priangan 2</div>
+                <div class="place-address">Gg. Tirta Sari No.1, Tembalang, Kec. Tembalang, Kota Semarang, Jawa Tengah 50275</div>
+                <div class="place-description">Basecamp pertama aku sama temen temen waktu kuliah di undip, dan pertama kalinya aku tau ternyata kita punya selera yang sama yaitu suka yang asin asin dan tetap dengan menu signature kita yaitu ayam bali crispy polosan, bisa menjadi tempat makan yang enak juga kalau kita udah kepentok bingung mau makan dimana</div>
+                <div class="place-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.8955968000481!2d110.43875823291597!3d-7.058256017029179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708f1d62328e6f%3A0x7242fd8e44f0307a!2sBURJO%20PRIANGAN2!5e0!3m2!1sid!2sid!4v1734343760486!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- Masukkan embed peta dari Google Maps di sini -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Template untuk tempat 5 -->
+        <div class="place-card">
+            <div class="place-photo" style="background-image: url('https://i.ibb.co.com/3S8hnpb/Bunda2.jpg');">
+                <!-- Ganti your-photo4.jpg dengan foto yang diinginkan -->
+            </div>
+            <div class="place-details">
+                <div class="place-name">Bunda 2</div>
+                <div class="place-address">Jl. Bulusan Selatan I, Bulusan, Kec. Tembalang, Kota Semarang, Jawa Tengah 50277</div>
+                <div class="place-description">Kalo mikirin Bunda 2 pasti ga jauh jauh dari indomie penyet, pertama kali kamu kenalin aku makanan seporsi tukang gali itu dan pertama kalinya aku kaget kalo kamu ternyata porsinya segitu.... hehehehehehehehe, tapii bagusss koo berarti kamu anaknya sehattt dan tidak membuang-buang makanan, aku belom pernah cobain geprek bakar itu, kapan kapan lagi yaaa</div>
+                <div class="place-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d832.3899937692931!2d110.44612115119898!3d-7.0636269683284905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708f0029fcdb5f%3A0xe366496b61a6a42!2sWarmindo%20Bunda%202!5e0!3m2!1sid!2sid!4v1734344951774!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- Masukkan embed peta dari Google Maps di sini -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Template untuk tempat 5 -->
+        <div class="place-card">
+            <div class="place-photo" style="background-image: url('https://i.ibb.co.com/TtjwLGS/ThePark.jpg');">
+                <!-- Ganti your-photo4.jpg dengan foto yang diinginkan -->
+            </div>
+            <div class="place-details">
+                <div class="place-name">The Park</div>
+                <div class="place-address">Tawangmas, Kec. Semarang Barat, Kota Semarang, Jawa Tengah 50144</div>
+                <div class="place-description">Suatu kerandoman yang gokil ga si wkwkwk, habis kita random dari bandara trus asal nyeplos mau makan dimana trus lewat tuh the park dan kita random apa kita ke the park aja ya, trus yauda gas gas ajaa wkwk, kamu ngajak aku muter muter liatin makeup trus kamu jadiin aku tumbal buat ngecek warna di tangan aku, tapi seru si karena first time hehe, dan lanjut makan steak dan kita random sama mas mas nya yang jualan steak trus kita muter MR DIY liatin barang barang dan akhirnya pulang</div>
+                <div class="place-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.3835096578723!2d110.397365349454!3d-6.964004698118882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70f5716961dd8f%3A0xbd2e5629478ec3a9!2sThe%20Park%20Mall%20Semarang!5e0!3m2!1sid!2sid!4v1734553189069!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- Masukkan embed peta dari Google Maps di sini -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Template untuk tempat 5 -->
+        <div class="place-card">
+            <div class="place-photo" style="background-image: url('https://i.ibb.co.com/n7RV1JL/urban.jpg');">
+                <!-- Ganti your-photo4.jpg dengan foto yang diinginkan -->
+            </div>
+            <div class="place-details">
+                <div class="place-name">Urban Coffe</div>
+                <div class="place-address">Jl. Indraprasta No.72, Pindrikan Lor, Kec. Semarang Tengah, Kota Semarang, Jawa Tengah 50131</div>
+                <div class="place-description">Kerandoman kita buat jalan ke semarang bawah tengah malem yang dimana pertimbanganya kalo main di tembalang, kamu bakal bawa laptop tapi kalo main jauh kamu ga bawa laptop dan aku nyulik kamu ke semarang bawah wkwk, disini aku pertama kali nyobain jaket kamu yang pernah aku katain kaya karpet hehe, maaffffffff, tapi ternyata enak dan nyaman banget buat dipake dan kita tukeran jaket, kamu jadi pake full item sementara aku pink ngepres gitu</div>
+                <div class="place-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990.0647056192397!2d110.40692597969294!3d-6.9787572532474496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b6b901a788f%3A0x988ef01ae926818d!2sUrban%20Coffee%20and%20Space!5e0!3m2!1sid!2sid!4v1734553678233!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- Masukkan embed peta dari Google Maps di sini -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Template untuk tempat 5 -->
+        <div class="place-card">
+            <div class="place-photo" style="background-image: url('https://i.ibb.co.com/7W4Jb3V/Wayang.jpg');">
+                <!-- Ganti your-photo4.jpg dengan foto yang diinginkan -->
+            </div>
+            <div class="place-details">
+                <div class="place-name">Wayang Kofie</div>
+                <div class="place-address">Jalan Sambiroto Tembalang, Kedungmundu, Kec. Tembalang, Kota Semarang, Jawa Tengah 50274</div>
+                <div class="place-description">Tempat Hidden Gem yang mempunyai suasana tenang dan sepi, cocok buat kita kalo mau mencari suasana sepi untuk deeptalk, kita udah beberapa kali kesini dan aku inget banget awal aku ajak kamu kesini aku ketiduran hehehe, maafiinn aku yaa, disini juga kamu pertama kali pake outer aku yang gunung sumbing warna hijau dan kamu sg in</div>
+                <div class="place-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.897419093519!2d110.45656298623402!3d-7.021342990560276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708c5b14cecb0b%3A0x666d0fd827a80df0!2sWayang%20Kofie!5e0!3m2!1sid!2sid!4v1734554066327!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- Masukkan embed peta dari Google Maps di sini -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Template untuk tempat 5 -->
+        <div class="place-card">
+            <div class="place-photo" style="background-image: url('https://i.ibb.co.com/XydPS9Q/dasaran.jpg');">
+                <!-- Ganti your-photo4.jpg dengan foto yang diinginkan -->
+            </div>
+            <div class="place-details">
+                <div class="place-name">Dasaran Kopi</div>
+                <div class="place-address">Jl. Gemah Jaya I No.65, Kedungmundu, Kec. Tembalang, Kota Semarang, Jawa Tengah 50272</div>
+                <div class="place-description">Kita baru pertama kali main kesini, dan ini tempat yang enak juga ambient nya even ga se enak wayang, aku ajak kamu kesini karena aku dulu sering kesini dan disini kita menunggu hujann disini dan pulang pulang kamunya melerrrr</div>
+                <div class="place-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2376.685760861639!2d110.4640162370691!3d-7.021594518102601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708d5bd3fce89d%3A0x996042f2012bb6d8!2sDasaran%20Kopi!5e0!3m2!1sid!2sid!4v1734554380287!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- Masukkan embed peta dari Google Maps di sini -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Template untuk tempat 5 -->
+        <div class="place-card">
+            <div class="place-photo" style="background-image: url('https://i.ibb.co.com/chHcPt6/lekerstory.jpg');">
+                <!-- Ganti your-photo4.jpg dengan foto yang diinginkan -->
+            </div>
+            <div class="place-details">
+                <div class="place-name">Lekker Story</div>
+                <div class="place-address">Jl. Ngesrep Tim. V No.54, Sumurboto, Kec. Banyumanik, Kota Semarang, Jawa Tengah 50261</div>
+                <div class="place-description">Tempat kamu skripsiaannnnnnn, suasana nyaa enak sepi dan chill even tempatnya kecil dan bikin nyaman, aku pertama kali nemenin kamu skripsian disini dan even kamu dengan muka datar dan pake earbuds tapi kamu masih sempet sempetnya buat ngepuk puk aku hehehehe, lovee uuuuuuu sayaanggggggg, aku suka digituin waktu kamu ngerjain skripsi, kek lagi kerja tapi ada tanggungan bayi gede yang harus diemong jugaaa</div>
+                <div class="place-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1693.505432985174!2d110.42310606336325!3d-7.050558621700376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708bdc79c67193%3A0x4571bb8ccd50939a!2sLekker%20Dan%20Kopi%20By%20Lekker%20Story!5e0!3m2!1sid!2sid!4v1734554941752!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- Masukkan embed peta dari Google Maps di sini -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Template untuk tempat 5 -->
+        <div class="place-card">
+            <div class="place-photo" style="background-image: url('https://i.ibb.co.com/88C7fJ3/Kakoi.jpg');">
+                <!-- Ganti your-photo4.jpg dengan foto yang diinginkan -->
+            </div>
+            <div class="place-details">
+                <div class="place-name">Kakkoii</div>
+                <div class="place-address">Jl. MT. Haryono No.890, Peterongan, Kec. Semarang Sel., Kota Semarang, Jawa Tengah 50242</div>
+                <div class="place-description">"Kamu pingin aku nanti malem cantik apa cantik banget?", "Cantik banget", dann wow tarnyata cewe ini bisa ya secakepp ituuu, mix antara merah dan item ternyata bikin dia terlihat elegan dan fancy dan aku ngerasa bersalah dia harus ngemong bayi gede buat diajarin caranya all u can eat, mulai dari kalo ngambil jangan dikit dikit dan langsung disikat semuanyaa, cobain semua menuu dan sekalinya kembali ke meja itu tangan penuh dengan makanan makanan, hehehehe makasiii sayaangg udah diajarinn dan mau nyuapin bayi gede ini jugaa</div>
+                <div class="place-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1277.983979466143!2d110.4316873036833!3d-6.997687982096787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708df83d2099eb%3A0x7de587acd791636e!2sKakkoii%20All%20You%20Can%20Eat%20Japanese%20BBQ%20%26%20Shabu%20-%20Shabu%2C%20Semarang%20MT.%20Haryono!5e0!3m2!1sid!2sid!4v1734555543653!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- Masukkan embed peta dari Google Maps di sini -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Template untuk tempat 5 -->
+        <div class="place-card">
+            <div class="place-photo" style="background-image: url('https://i.ibb.co.com/GxCZRP4/CFD.jpg');">
+                <!-- Ganti your-photo4.jpg dengan foto yang diinginkan -->
+            </div>
+            <div class="place-details">
+                <div class="place-name">Car Free Day</div>
+                <div class="place-address">Jl. Simpang Lima, Mugassari, Kec. Semarang Sel., Kota Semarang, Jawa Tengah 50249</div>
+                <div class="place-description">"Besok minggu ikut CFD an yokkk", "serandom itu?", yaaa hubungan kita pasti ada aja randomnya dan ini awal pertama kali kamu main sama keluarga aku, outfitnya sih olahraga yak tapi mah pas sampe lokasi malah jajannnnnnn, huuuu wkwkwkwkkw, yaaa on another side kan kamu juga suka jajanann so its a win win solution ngajak kamu kesini, masih banyak jajanan yang belom kita coba dan kita juga harus olahraga sayangggg bukan cuman njajannn, biar sehattt yaaaa</div>
+                <div class="place-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.160127007664!2d110.42034687325808!3d-6.990412593010589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708bf24cedeb4f%3A0x3ae6ed2589795c77!2sLapangan%20Pancasila%20Simpang%20Lima%20Semarang!5e0!3m2!1sid!2sid!4v1734555975042!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- Masukkan embed peta dari Google Maps di sini -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Ada beberapa tempat yang aku ga masukan karena cuman sekedar mampir atau kita ada kenangan buruk di tempat itu, closing statement dari aku adalah <br>"So? Where we go next, Sweetheart?"</p>
+    </footer>
 </body>
 </html>
