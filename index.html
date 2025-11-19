@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semprotulation Tata</title>
+    <link rel="preload" as="image" href="https://wsrv.nl/?url=https://i.ibb.co.com/jPmM9BJV/Whats-App-Image-2025-11-19-at-14-03-15-26293118.jpg&w=500&q=80&output=webp">
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
 
         body {
-            /* Menggunakan font yang bersih dan modern (bukan Comic Sans) */
             font-family: 'Poppins', sans-serif;
-            /* Background RGB Pelangi yang diminta tetap dipertahankan */
+            /* Background RGB Pelangi */
             background: linear-gradient(135deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #ee82ee);
             background-size: 400% 400%;
             animation: rainbowBg 10s ease infinite;
@@ -64,22 +65,23 @@
             50% { border-color: #fff }
         }
 
-        /* Container Foto yang lebih elegan */
         .photo-box {
             width: 220px;
             height: 220px;
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
             border: 5px solid rgba(255, 255, 255, 0.5);
-            border-radius: 20px; /* Sudut membulat yang wajar */
+            border-radius: 20px;
             overflow: hidden;
             margin: 20px 0;
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
             transition: transform 0.3s ease;
+            position: relative;
+            z-index: 10; /* Biar foto utama di atas balon */
         }
         
         .photo-box:hover {
-            transform: scale(1.05); /* Efek zoom sedikit saat di-hover */
+            transform: scale(1.05);
         }
 
         .photo-box img {
@@ -88,7 +90,6 @@
             object-fit: cover;
         }
 
-        /* Tombol modern */
         button {
             margin-top: 20px;
             font-family: 'Poppins', sans-serif;
@@ -102,6 +103,8 @@
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             transition: all 0.3s ease;
+            position: relative;
+            z-index: 10;
         }
 
         button:hover {
@@ -116,15 +119,16 @@
             height: 60px;
             top: -100px;
             object-fit: cover;
-            border-radius: 50%; /* Balon jadi bulat berisi foto */
+            border-radius: 50%;
             border: 2px solid white;
             animation: floatDown 6s linear;
             opacity: 0.8;
+            z-index: 1;
         }
 
         @keyframes floatDown {
-            0% { transform: translateY(-100px); opacity: 0.8; }
-            100% { transform: translateY(110vh); opacity: 0; }
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 0.8; }
+            100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
         }
 
         .copyright {
@@ -132,9 +136,9 @@
             bottom: 20px;
             font-size: 0.8em;
             opacity: 0.8;
+            z-index: 10;
         }
 
-        /* Responsif */
         @media (max-width: 600px) {
             h1 { font-size: 2em; }
             .photo-box { width: 180px; height: 180px; }
@@ -147,25 +151,31 @@
     <h1 class="typewriter">Semprotulation Tata! 🎉</h1>
     
     <div class="photo-box">
-        <img src="https://i.ibb.co.com/jPmM9BJV/Whats-App-Image-2025-11-19-at-14-03-15-26293118.jpg" alt="Tata">
+        <img src="https://wsrv.nl/?url=https://i.ibb.co.com/jPmM9BJV/Whats-App-Image-2025-11-19-at-14-03-15-26293118.jpg&w=500&q=80&output=webp" alt="Tata">
     </div>
 
     <p>
-        Salam dari Para Pendaki Gunung<br>
+        Selamat ya atas Seminar Proposalnya!<br>
+        Satu langkah lebih dekat menuju toga.<br>
+        Semoga lancar revisiannya dan semangat skripsian!
     </p>
+
+    <button onclick="celebrate()">Klik untuk Rayakan!</button>
+
+    <div class="copyright">© 2025 Special for Tata</div>
 
     <script>
         const balloonWrapper = document.querySelector('.balloon-wrapper');
-        const photoUrl = "https://i.ibb.co.com/jPmM9BJV/Whats-App-Image-2025-11-19-at-14-03-15-26293118.jpg";
+        
+        // URL gambar untuk balon (di-resize LEBIH KECIL lagi jadi 150px biar ringan banget)
+        const photoUrl = "https://wsrv.nl/?url=https://i.ibb.co.com/jPmM9BJV/Whats-App-Image-2025-11-19-at-14-03-15-26293118.jpg&w=150&q=60&output=webp";
 
-        // Fungsi membuat "hujan" foto
         function createBalloon() {
             const balloon = document.createElement('img');
             balloon.src = photoUrl;
             balloon.className = "balloons";
-            balloon.style.left = `${Math.random() * 90}vw`; // Posisi horizontal acak
+            balloon.style.left = `${Math.random() * 90}vw`;
             
-            // Ukuran acak sedikit biar variatif
             const size = Math.random() * 30 + 40; 
             balloon.style.width = `${size}px`;
             balloon.style.height = `${size}px`;
@@ -177,26 +187,23 @@
             });
         }
 
-        // Mulai hujan foto otomatis tapi pelan
         let rainInterval = setInterval(createBalloon, 800);
 
-        // Fungsi tombol: memperbanyak hujan foto
         function celebrate() {
-            // Percepat interval sesaat
             clearInterval(rainInterval);
             rainInterval = setInterval(createBalloon, 100);
             
-            // Ganti teks tombol
-            document.querySelector('button').innerText = "Yeeaaay! 🥳";
+            const btn = document.querySelector('button');
+            btn.innerText = "Yeeaaay! 🥳";
+            btn.style.transform = "scale(1.1)";
             
-            // Kembalikan ke kecepatan normal setelah 3 detik
             setTimeout(() => {
                 clearInterval(rainInterval);
                 rainInterval = setInterval(createBalloon, 800);
-                document.querySelector('button').innerText = "Klik untuk Rayakan!";
+                btn.innerText = "Klik untuk Rayakan!";
+                btn.style.transform = "scale(1)";
             }, 3000);
         }
     </script>
 </body>
 </html>
-
